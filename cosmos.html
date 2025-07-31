@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+        content="Paths of A Million People: Extracting Life Trajectories from Wikipedia">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Paths of A Million People: Extracting Life Trajectories from Wikipedia</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -89,6 +89,9 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Paths of A Million People: Extracting Life Trajectories from Wikipedia</h1>
+          <h1 class="title is-3 publication-title">
+            <span class="tag is-info is-light is-rounded" style="margin-left: 0.5em; font-size: 0.65em; vertical-align: middle;">ICWSM 2025</span> 
+          </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://jjydxfs.github.io/academic/">Ying Zhang</a><sup>*</sup>,</span>
@@ -112,7 +115,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/35930"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -120,28 +123,9 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/ZhangDataLab/COSMOS"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -151,13 +135,34 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://huggingface.co/datasets/JJYDXFS/LifeTrajectory_5M"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="far fa-images"></i>
+                      <i class="fas fa-solid fa-database"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Dataset</span>
                   </a>
+              </span>
+              <!-- Slides Link. -->
+              <span class="link-block">
+                <a href="https://jjydxfsfile.oss-cn-beijing.aliyuncs.com/pdf/academic/ICWSM2025_COSMOS.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Slides</span>
+                  </a>
+              </span>
+              <!-- Poster Link. -->
+              <span class="link-block">
+                <a href="https://jjydxfsfile.oss-cn-beijing.aliyuncs.com/pdf/academic/ICWSM2025_COSMOS_poster.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Poster</span>
+                  </a>
+              </span>
             </div>
 
           </div>
@@ -175,11 +180,115 @@
 </section>
 
 
-<div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">TBC ...</h1>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          The life trajectories of notable people have been studied to pinpoint the times and places of significant events such as birth, death, education, marriage, competition, work, speeches, scientific discoveries, artistic achievements, and battles. 
+          Understanding how these individuals interact with others provides valuable insights for broader research into human dynamics. 
+          <p>
+          However, the scarcity of trajectory data in terms of volume, density, and inter-person interactions, limits relevant studies from being comprehensive and interactive. 
+          We mine millions of biography pages from Wikipedia and tackle the generalization problem stemming from the variety and heterogeneity of the trajectory descriptions. 
+          </p>
+          <p>
+          Our ensemble model COSMOS, which combines the idea of semi-supervised learning and contrastive learning, achieves an F1 score of 85.95%.
+          Besides, we perform an empirical analysis on the trajectories of 8,272 historians to demonstrate the validity of the extracted results. 
+          </p>
+          <p>
+          To facilitate the research on trajectory extractions and help the analytical studies to construct grand narratives, we make our code, the million-level extracted trajectories, and the hand-curated dataset WikiLifeTrajectory publicly available.
+          </p>
         </div>
-</div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Architecture of COSMOS</h2>
+          <img src="https://jjydxfsfile.oss-cn-beijing.aliyuncs.com/pdf/academic/cosmos_arch.png" width="75%">
+      </div>
+    </div>
+    <p>
+    Motivated by the need to better utilize the intrinsic structure of data, COSMOS combines both contrastive learning and semi-supervised learning to obtain robust representations.
+    As illustrated in the figure, COSMOS learns the representations of triplets and their contexts through parallel CNN and BERT, and then classifies them based on the resulting representations.
+    </p>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Map -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Visualization of Life Trajectory</h2>
+          <p>
+            Life trajectories of <em>H.Bruce Franklin</em>, <em>Karl Theodor Keim</em> and <em>John Henry Brown</em>.
+            The arrows of each color represent the life trajectory of the corresponding individual.
+            The start point of each trajectory is marked with a circle. The year and purpose of the move are labeled on the arrows.
+          </p>
+          <img src="https://jjydxfsfile.oss-cn-beijing.aliyuncs.com/pdf/academic/cosmos_map.png" width="90%">
+        </div>
+      </div>
+      <!--/ Map -->
+
+      <!-- Network -->
+      <div class="column">
+        <h2 class="title is-3">Co-occurrence Network</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Dynamic interaction network comprising 899 historians.
+              (a) Snapshots of the network every from 1910 to 2020.
+              Nodes represent historians, sized by PageRank and colored by nationality.
+              (b) and (c) zoom in on two connectedcomponents in the 1980 snapshot and 2020 snapshot respec-tively.
+            </p>
+            <img src="https://jjydxfsfile.oss-cn-beijing.aliyuncs.com/pdf/academic/cosmos_net.png" width="90%">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Network -->
+
+    <!-- Dataset -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Million-level Life Trajectories 📊</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            From controlled experiments to large-scale practice, we scale up life trajectory extraction from <strong>1.9 Million Wikipedia biographies</strong> to over <strong>5 million</strong> life trajectory triplets <em>(Person, Time, Location)</em>.
+            The resulting dataset is publicly available for exploration!
+          </p>
+          <a class="button is-link is-light is-medium" href="https://huggingface.co/datasets/JJYDXFS/LifeTrajectory_5M" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-solid fa-database"></i>&nbsp; View on Hugging Face
+          </a>
+        </div>
+        <div class="columns is-vcentered">
+          <img src="https://jjydxfsfile.oss-cn-beijing.aliyuncs.com/pdf/academic/cosmos_dataset.png" width="100%">
+        </div>
+        <br/>
+        <!--/ Dataset -->
+
+      </div>
+    </div>
+
+
+    <!-- Concurrent Work. -->
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
 
 
 <section class="section" id="BibTeX">
@@ -203,8 +312,7 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-          <!-- <p>
-          </p> -->
+          <div class="copyright">©2025 by <a href="https://jjydxfs.github.io/">JJYDXFS</a></div>
           <p>
           The source code from this website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">this template!</a>
           </p>
