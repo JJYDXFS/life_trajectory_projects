@@ -115,7 +115,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/abs/2510.00019"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -125,7 +125,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://anonymous.4open.science/r/FALCON-7EF9"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -133,7 +133,7 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Website Link. -->
+              <!-- Website Link.
               <span class="link-block">
                 <a href="falcon.html"
                    class="external-link button is-normal is-rounded is-dark">
@@ -142,7 +142,7 @@
                   </span>
                   <span>Website</span>
                   </a>
-              </span>
+              </span> -->
             </div>
 
           </div>
@@ -152,11 +152,137 @@
   </div>
 </section>
 
-<div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">TBC ...</h1>
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+        <p>
+          Interactions among notable individuals—whether examined individually, in groups, or as networks—often convey significant messages across cultural, economic, political, scientific, and historical perspectives.
+          By analyzing the times and locations of these interactions, we can observe how dynamics unfold across regions over time.
+        </p>
+        <p>
+          To bridge the gap resulting from the scarcity of such interaction data, in this work, we mine millions of biography pages from Wikipedia through the proposed model FALCON, extracting 685,966 interaction records in the form of (Person1, Person2, Time, Location) interaction quadruplets.
+        </p>
+        <p>
+        We further conduct an empirical analysis of intra- and inter-party interactions among political figures to
+        examine political polarization in the US, showcasing the potential of the extracted data from a perspective that may not be possible without this data.
+        <p>
+        Our code, the extracted interaction data, and the WikiInteraction benchmark of 4,507 labeled interaction quadruplets are publicly available.
+        </p>
+        </p>
         </div>
-</div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Architecture of FALCON</h2>
+          <img src="https://jjydxfsfile.oss-cn-beijing.aliyuncs.com/share_img/falcon_method.png" width="100%">
+      </div>
+    </div>
+    <p>
+    To accurately associate individuals with their specific spatio-temporal interactions, especially when the information is scattered throughout a text, FALCON exerts a framework combining multitask and transfer learning. As shown in the figure, FALCON uses a modified AR-BERT model to extract features for two related tasks: a main interaction classification task and an auxiliary trajectory classification task.
+    Meanwhile, it incorporates features from a separate, frozen AR-BERT model (pre-trained on trajectory data) through a feature fusion module.
+    </p>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Histogram -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Interactions of US Political Figures 🇺🇸</h2>
+        <h3 class="title is-4" style="font-style: italic; color: rgba(125, 125, 125, 0.583);">A New Lens on Political Polarization</h3>
+        <div class="content has-text-justified">
+          <p>
+            To demonstrate our data's potential, we analyzed 14,084 interactions between 3,896 Republican and 3,995 Democratic figures from 1960 to 2024.
+            This offers a new perspective on political polarization by focusing on direct, real-world interactions rather than polls or social media data.
+          </p>
+          <p>
+          The following bar chart reveals that the nature of inter-party interactions has dramatically shifted over time.
+          Adversarial interactions have steadily increased to dominate by the 2020s, while Cooperative and Neutral interactions have sharply declined, indicating growing polarization.
+          </p>
+        </div>
+        <div class="columns is-vcentered is-centered">
+          <img src="https://jjydxfsfile.oss-cn-beijing.aliyuncs.com/share_img/falcon_fig_4.png" width="75%">
+        </div>
+        <br/>
+        <!--/ Histogram -->
+
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+
+      
+
+      <!-- Histogram -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Political Interaction Network</h2>
+          <p>
+            We then map all interactions from 1960-2024, with red nodes for Republicans and blue for Democrats; edges are weighted by interaction type.
+            The two partisan groups are visually separated, with few cross-party connections, clearly illustrates the structure of political polarization.
+          </p>
+          <div class="columns is-vcentered is-centered">
+            <img src="https://jjydxfsfile.oss-cn-beijing.aliyuncs.com/share_img/falcon_fig_5.png" width="120%">
+          </div>
+        </div>
+      </div>
+      <!--/ Histogram -->
+
+      <!-- Network -->
+      <div class="column">
+        <h2 class="title is-3">Analysis of Polarization Trends</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Statistics in (a) shows a clear upward trend in national polarization, with accelerated growth during the Obama and Trump presidencies.
+              While in (b), the state-level data reveals diverse patterns, such as a steep rise in Washington D.C. and a recent decline in California.
+            </p>
+            <div class="columns is-vcentered is-centered">
+              <img src="https://jjydxfsfile.oss-cn-beijing.aliyuncs.com/share_img/falcon_fig_6.png" width="80%">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Network -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{liu2025lifepathscrossextracting,
+      title={When Life Paths Cross: Extracting Human Interactions in Time and Space from Wikipedia}, 
+      author={Zhongyang Liu and Ying Zhang and Xiangyi Xiao and Wenting Liu and Yuanting Zha and Haipeng Zhang},
+      year={2025},
+      eprint={2510.00019},
+      archivePrefix={arXiv},
+      primaryClass={cs.SI},
+      url={https://arxiv.org/abs/2510.00019},
+}</code></pre>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container">
