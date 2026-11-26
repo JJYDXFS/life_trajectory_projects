@@ -107,6 +107,26 @@ body {
     height: 100%;
 }
 
+.dataset-viewer {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.dataset-viewer iframe {
+  display: block;
+  width: 100%;
+  min-height: 560px;
+}
+
+@media screen and (max-width: 768px) {
+  .dataset-viewer iframe {
+    min-height: 640px;
+  }
+}
+
 .publication-body img {
 }
 
